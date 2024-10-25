@@ -1,0 +1,9 @@
+#write a python program to calculate total orders of items from the online app
+
+products_prices=[56.3,489.50,78.65,50.00,102.00]
+total_items=0
+for i in products_prices:
+    total_items+=i
+print(total_items)
+total_orders=len(products_prices)
+print(total_orders)
