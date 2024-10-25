@@ -1,0 +1,17 @@
+emp_period=int(input("enter no.of years"))
+salary=int(input("enter your salary monthly"))
+if emp_period>10:
+    sal=salary*(15/100)
+    print("Bonus amount:", sal)
+    bonus = sal + salary
+    print("total amount:", bonus)
+elif 5 > emp_period > 10:
+    sal = salary * (10 / 100)
+    print("Bonus amount:",sal)
+    bonus = sal + salary
+    print("total amount:", bonus)
+else:
+    sal = salary * (5 / 100)
+    print("Bonus amount:", sal)
+    bonus = sal + salary
+    print("total amount:", bonus)
