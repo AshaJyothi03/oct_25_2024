@@ -1,0 +1,9 @@
+bank_bal=[5000,6000,7000,9000,10000]
+rate_interest=0.5
+for balance in bank_bal:
+    print("calculate for",balance, "interest and total balance")
+    interest=balance*rate_interest
+    print("interest:",interest)
+    total_bal=balance+interest
+    print("total balance:", total_bal)
+    print("\n")
