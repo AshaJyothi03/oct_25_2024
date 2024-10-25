@@ -1,0 +1,38 @@
+from tkinter import *
+from tkinter import messagebox
+
+window = Tk()
+window.geometry("500x450")
+window.title("Restaurant bill discount")
+
+
+def discount_check():
+    bill_amt= int(e1.get())
+    membership=False
+    if bill_amt>100 and membership==True:
+        discount_amt=bill_amt*(5/100)
+        res=bill_amt-discount_amt
+        discount=res*(5/100)
+        final_amount=res-discount
+        print("After discount amount:",final_amount)
+        #messagebox.showinfo("status", "Even Number")
+    elif bill_amt>100 or membership==False:
+        discount_amount = bill_amt * (5 / 100)
+        final_amount = bill_amt - discount_amount
+        print("After discount amount:", final_amount)
+
+    else:
+        print("Sorry! u have no membership and not a more than 100$ bill")
+
+
+
+# label1: first number
+l1 = Label(window, text="Bill_amt", font=30)
+l1.grid(row=0, column=0)
+# entry box for NUM1
+e1 = Entry(window)
+e1.grid(row=0, column=1)
+# button for sum
+b1_sum = Button(window, text="Enter", command=discount_check)
+b1_sum.grid(row=4, column=0)
+window.mainloop()
